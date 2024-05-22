@@ -63,10 +63,21 @@ namespace BomVino_PPAI.Views
 
         private void BodegaDGV_SelectionChanged(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell celda in BodegaDGV.SelectedCells)
-            {
-                Console.WriteLine($"Celda seleccionada en fila {celda.RowIndex}, columna {celda.ColumnIndex}");
+            //foreach (DataGridViewCell celda in BodegaDGV.SelectedCells)
+            //{
+            //    Console.WriteLine($"Celda seleccionada en fila {celda.RowIndex}, columna {celda.ColumnIndex}");
 
+            //}
+
+            if (BodegaDGV.SelectedCells.Count > 0)
+            {
+                DataGridViewCell seleccionado = BodegaDGV.SelectedCells[0];
+                int rowIndex = seleccionado.RowIndex;
+
+                DataGridViewRow selectedRow = BodegaDGV.Rows[rowIndex];
+
+                string nombre = selectedRow.Cells["Nombre"].Value.ToString();
+                //MessageBox.Show(nombre);
             }
         }
     }

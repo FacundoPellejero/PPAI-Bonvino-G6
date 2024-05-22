@@ -55,7 +55,7 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             BodegaDGV = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
@@ -221,7 +221,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             BodegaDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             BodegaDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BodegaDGV.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            BodegaDGV.Columns.AddRange(new DataGridViewColumn[] { Column1, Nombre, Column3, Column4, Column5 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -260,14 +260,14 @@
             Column1.ReadOnly = true;
             Column1.Width = 39;
             // 
-            // Column2
+            // Nombre
             // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column2.HeaderText = "Nombre";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            Column2.Width = 76;
+            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Nombre.HeaderText = "Nombre";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            Nombre.Width = 76;
             // 
             // Column3
             // 
@@ -336,7 +336,7 @@
         private Guna.UI2.WinForms.Guna2Button btnRegistrarVarietal;
         private DataGridView BodegaDGV;
         private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
