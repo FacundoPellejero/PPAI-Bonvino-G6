@@ -181,6 +181,7 @@
             btnRegistrarVarietal.Size = new Size(123, 26);
             btnRegistrarVarietal.TabIndex = 8;
             btnRegistrarVarietal.Text = "Actualizar";
+            btnRegistrarVarietal.Click += btnRegistrarVarietal_Click;
             // 
             // guna2Button1
             // 
