@@ -21,7 +21,7 @@ namespace BomVino_PPAI.Models.DTO
         // Constructor
         public Bodega(int id,string nombre, string descripcion, string coordenadasUbicacion, DateTime ultimaActualizacion, int periodoActualizacion)
         {
-            id = id;
+            this.id = id;
             Nombre = nombre;
             Descripcion = descripcion;
             CoordenadasUbicacion = coordenadasUbicacion;
@@ -33,5 +33,25 @@ namespace BomVino_PPAI.Models.DTO
         public Bodega()
         {
         }
+        public static void test()
+        {
+            
+        }
+
+
+        public bool estaParaActualizarNovedadesVinos(DateTime fechaActual)
+        {
+            if ((fechaActual - this.UltimaActualizacion).TotalDays >= this.PeriodoActualizacion * 30)
+            {
+                return true;
+            }
+                return false;
+        }
+
+        public string getNombre()
+        {
+            return this.Nombre;
+        }
+
     }
 }

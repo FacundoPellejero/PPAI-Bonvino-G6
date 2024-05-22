@@ -90,11 +90,11 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = Color.Maroon;
-            guna2HtmlLabel4.Location = new Point(73, 16);
+            guna2HtmlLabel4.Location = new Point(83, 16);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(260, 42);
+            guna2HtmlLabel4.Size = new Size(249, 42);
             guna2HtmlLabel4.TabIndex = 3;
-            guna2HtmlLabel4.Text = "Iniciar de Sesión";
+            guna2HtmlLabel4.Text = "Inicio de Sesión";
             // 
             // label1
             // 
@@ -160,11 +160,16 @@
             ComboRols.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboRols.FocusedColor = Color.Maroon;
             ComboRols.FocusedState.BorderColor = Color.Maroon;
+            ComboRols.FocusedState.FillColor = Color.Transparent;
+            ComboRols.FocusedState.ForeColor = Color.Transparent;
             ComboRols.Font = new Font("Segoe UI", 10F);
             ComboRols.ForeColor = Color.Black;
             ComboRols.HoverState.BorderColor = Color.Maroon;
+            ComboRols.HoverState.FillColor = Color.Transparent;
             ComboRols.ItemHeight = 30;
             ComboRols.Items.AddRange(new object[] { "Administrador De Bonvino", "Enófilo", "Referente De Bodega", "Somelier" });
+            ComboRols.ItemsAppearance.SelectedBackColor = Color.LightGray;
+            ComboRols.ItemsAppearance.SelectedForeColor = Color.Black;
             ComboRols.Location = new Point(46, 112);
             ComboRols.Name = "ComboRols";
             ComboRols.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -192,7 +197,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(485, 544);
+            ClientSize = new Size(479, 544);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(groupBoxBtnCU);
             FormBorderStyle = FormBorderStyle.None;

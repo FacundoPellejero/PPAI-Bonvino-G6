@@ -19,21 +19,25 @@ namespace BomVino_PPAI.Views
             InitializeComponent();
         }
 
-        public void opcionImportarActualizacionVinos() 
+        public void opcionImportarActualizacionVinos()
         {
             GestorImportadorBodega gestor = new GestorImportadorBodega(this);
             gestor.opcionImportarActualizacionVinos();
         }
 
-        public void mostarBodegasParaAcutalizar(List<Bodega> bodegas) 
+        public void mostarBodegasParaAcutalizar(List<Bodega> bodegas)
         {
             BodegaDGV.Rows.Clear();
             foreach (Bodega bodega in bodegas)
             {
-                BodegaDGV.Rows.Add(bodega.id,bodega.Nombre, bodega.CoordenadasUbicacion, bodega.UltimaActualizacion, bodega.PeriodoActualizacion);
+                BodegaDGV.Rows.Add(bodega.id, bodega.Nombre, bodega.Descripcion, bodega.UltimaActualizacion, bodega.PeriodoActualizacion);
             }
 
         }
 
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

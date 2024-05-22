@@ -73,31 +73,32 @@
             // 
             txtBuscarBodegaSelección.BorderColor = Color.Black;
             txtBuscarBodegaSelección.BorderRadius = 6;
+            txtBuscarBodegaSelección.CausesValidation = false;
             txtBuscarBodegaSelección.CustomizableEdges = customizableEdges9;
             txtBuscarBodegaSelección.DefaultText = "";
             txtBuscarBodegaSelección.DisabledState.BorderColor = Color.Maroon;
             txtBuscarBodegaSelección.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtBuscarBodegaSelección.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtBuscarBodegaSelección.DisabledState.PlaceholderForeColor = Color.Maroon;
-            txtBuscarBodegaSelección.FocusedState.BorderColor = Color.Maroon;
-            txtBuscarBodegaSelección.Font = new Font("Segoe UI", 9F);
+            txtBuscarBodegaSelección.FocusedState.BorderColor = Color.Black;
+            txtBuscarBodegaSelección.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtBuscarBodegaSelección.ForeColor = Color.Black;
-            txtBuscarBodegaSelección.HoverState.BorderColor = Color.Maroon;
-            txtBuscarBodegaSelección.Location = new Point(45, 128);
-            txtBuscarBodegaSelección.Margin = new Padding(3, 4, 3, 4);
+            txtBuscarBodegaSelección.HoverState.BorderColor = Color.Black;
+            txtBuscarBodegaSelección.Location = new Point(39, 96);
             txtBuscarBodegaSelección.Name = "txtBuscarBodegaSelección";
             txtBuscarBodegaSelección.PasswordChar = '\0';
-            txtBuscarBodegaSelección.PlaceholderForeColor = Color.Maroon;
+            txtBuscarBodegaSelección.PlaceholderForeColor = Color.Black;
             txtBuscarBodegaSelección.PlaceholderText = "";
             txtBuscarBodegaSelección.SelectedText = "";
             txtBuscarBodegaSelección.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtBuscarBodegaSelección.Size = new Size(299, 32);
+            txtBuscarBodegaSelección.Size = new Size(262, 24);
             txtBuscarBodegaSelección.TabIndex = 1;
             // 
             // PictureSearch
             // 
             PictureSearch.Image = (Image)resources.GetObject("PictureSearch.Image");
-            PictureSearch.Location = new Point(350, 128);
+            PictureSearch.Location = new Point(306, 96);
+            PictureSearch.Margin = new Padding(3, 2, 3, 2);
             PictureSearch.Name = "PictureSearch";
             PictureSearch.Size = new Size(32, 32);
             PictureSearch.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -113,11 +114,13 @@
             guna2ControlBox1.FillColor = Color.Transparent;
             guna2ControlBox1.ForeColor = Color.Black;
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(810, 2);
+            guna2ControlBox1.Location = new Point(710, 2);
+            guna2ControlBox1.Margin = new Padding(3, 2, 3, 2);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ControlBox1.Size = new Size(56, 36);
+            guna2ControlBox1.Size = new Size(49, 27);
             guna2ControlBox1.TabIndex = 5;
+            guna2ControlBox1.Click += guna2ControlBox1_Click;
             // 
             // guna2ControlBox2
             // 
@@ -128,29 +131,31 @@
             guna2ControlBox2.FillColor = Color.Transparent;
             guna2ControlBox2.ForeColor = Color.Black;
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(751, 2);
+            guna2ControlBox2.Location = new Point(659, 2);
+            guna2ControlBox2.Margin = new Padding(3, 2, 3, 2);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ControlBox2.Size = new Size(56, 36);
+            guna2ControlBox2.Size = new Size(49, 27);
             guna2ControlBox2.TabIndex = 6;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Edwardian Script ITC", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Font = new Font("Edwardian Script ITC", 40.2F, FontStyle.Regular, GraphicsUnit.Point);
             guna2HtmlLabel1.Location = new Point(402, 3);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(216, 81);
+            guna2HtmlLabel1.Size = new Size(176, 66);
             guna2HtmlLabel1.TabIndex = 4;
             guna2HtmlLabel1.Text = "BonVino";
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Edwardian Script ITC", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(45, 12);
+            guna2HtmlLabel2.Font = new Font("Edwardian Script ITC", 40.2F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2HtmlLabel2.Location = new Point(39, 9);
+            guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(216, 81);
+            guna2HtmlLabel2.Size = new Size(176, 66);
             guna2HtmlLabel2.TabIndex = 7;
             guna2HtmlLabel2.Text = "BonVino";
             // 
@@ -165,13 +170,14 @@
             btnRegistrarVarietal.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegistrarVarietal.FillColor = Color.Maroon;
             btnRegistrarVarietal.FocusedColor = Color.White;
-            btnRegistrarVarietal.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrarVarietal.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegistrarVarietal.ForeColor = Color.White;
-            btnRegistrarVarietal.Location = new Point(671, 415);
+            btnRegistrarVarietal.Location = new Point(587, 311);
+            btnRegistrarVarietal.Margin = new Padding(3, 2, 3, 2);
             btnRegistrarVarietal.Name = "btnRegistrarVarietal";
             btnRegistrarVarietal.PressedColor = Color.Maroon;
             btnRegistrarVarietal.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnRegistrarVarietal.Size = new Size(141, 34);
+            btnRegistrarVarietal.Size = new Size(123, 26);
             btnRegistrarVarietal.TabIndex = 8;
             btnRegistrarVarietal.Text = "Actualizar";
             // 
@@ -186,13 +192,14 @@
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.Maroon;
             guna2Button1.FocusedColor = Color.White;
-            guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(506, 415);
+            guna2Button1.Location = new Point(443, 311);
+            guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.PressedColor = Color.Maroon;
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(141, 34);
+            guna2Button1.Size = new Size(123, 26);
             guna2Button1.TabIndex = 9;
             guna2Button1.Text = "Cancelar";
             // 
@@ -202,11 +209,13 @@
             BodegaDGV.AllowUserToAddRows = false;
             BodegaDGV.AllowUserToDeleteRows = false;
             BodegaDGV.BackgroundColor = Color.White;
+            BodegaDGV.CausesValidation = false;
+            BodegaDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Salmon;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             BodegaDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -214,19 +223,20 @@
             BodegaDGV.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             BodegaDGV.DefaultCellStyle = dataGridViewCellStyle3;
             BodegaDGV.GridColor = SystemColors.ControlDark;
-            BodegaDGV.Location = new Point(45, 167);
+            BodegaDGV.Location = new Point(39, 125);
+            BodegaDGV.Margin = new Padding(3, 2, 3, 2);
             BodegaDGV.Name = "BodegaDGV";
             BodegaDGV.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
@@ -234,7 +244,8 @@
             BodegaDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             BodegaDGV.RowHeadersVisible = false;
             BodegaDGV.RowHeadersWidth = 51;
-            BodegaDGV.Size = new Size(767, 233);
+            BodegaDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            BodegaDGV.Size = new Size(671, 175);
             BodegaDGV.TabIndex = 16;
             // 
             // Column1
@@ -244,49 +255,52 @@
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
-            Column1.Width = 47;
+            Column1.Width = 39;
             // 
             // Column2
             // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Column2.HeaderText = "Nombre";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
+            Column2.Width = 76;
             // 
             // Column3
             // 
-            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column3.HeaderText = "Coordenadas Ubicación";
+            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Column3.HeaderText = "Descripción";
             Column3.MinimumWidth = 6;
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
+            Column3.Width = 95;
             // 
             // Column4
             // 
-            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Column4.HeaderText = "Ultima Actualización";
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
-            Column4.Width = 163;
             // 
             // Column5
             // 
-            Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle2.ForeColor = Color.Black;
             Column5.DefaultCellStyle = dataGridViewCellStyle2;
             Column5.HeaderText = "Periodo Actualización (meses)";
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
+            Column5.Width = 138;
             // 
             // PantallaImportadorBodega
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(866, 463);
+            ClientSize = new Size(760, 362);
+            ControlBox = false;
             Controls.Add(BodegaDGV);
             Controls.Add(guna2Button1);
             Controls.Add(btnRegistrarVarietal);
@@ -296,6 +310,7 @@
             Controls.Add(PictureSearch);
             Controls.Add(txtBuscarBodegaSelección);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "PantallaImportadorBodega";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "lBE";

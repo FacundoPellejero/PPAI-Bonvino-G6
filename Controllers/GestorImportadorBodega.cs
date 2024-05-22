@@ -12,40 +12,50 @@ namespace BomVino_PPAI.Controllers
 {
     public class GestorImportadorBodega
     {
+
+        //Facu
+        private List<Bodega> listaBodegas = new List<Bodega>();
+        private string connectionString = environmentDAO.conexionBD;
+        private DateTime fechaActual = new DateTime();
+
         private BodegaDAO bodegaDAO;
         private PantallaImportadorBodega pantallaImportador;
 
         public GestorImportadorBodega(PantallaImportadorBodega pantallaImportador)
         {
-            string connectionString = "Server=RODRIGOFRIAS\\SQLEXPRESS; DataBase=Bonvino;Integrated Security=true; TrustServerCertificate=True"; // Define aquí tu cadena de conexión
+  
             this.bodegaDAO = new BodegaDAO(connectionString);
+            this.listaBodegas = bodegaDAO.getBodegas(); //aca cargamos la lista de bodegas
             this.pantallaImportador = pantallaImportador;
         }
      
         // Métodos
         public void opcionImportarActualizacionVinos()
         {
-           
-            DateTime fechaActual = getFechaActual();
-            pantallaImportador.mostarBodegasParaAcutalizar(this.buscarBodegasParaActualizar(fechaActual));    
+
+            //DateTime fechaActual = getFechaActual();
+            pantallaImportador.mostarBodegasParaAcutalizar(this.buscarBodegasParaActualizar());
+            //---para test despues borrar ---
+            //pantallaImportador.mostarBodegasParaAcutalizar(this.listaBodegas);
         }
 
-        private List<Bodega> buscarBodegasParaActualizar(DateTime fechaActual)
+        private List<Bodega> buscarBodegasParaActualizar()
         {
             List <Bodega> bodegasParaActualizar = new List<Bodega>();
-            // [Bloque IF / WHILE]
-            if (bodegaDAO.estaParaActualizarNovedadesVino(fechaActual) == true)
+            bool esParaActualizar;
+            this.fechaActual = getFechaActual();
+  
+            foreach (var bodega in listaBodegas)
             {
-                bodegasParaActualizar = bodegaDAO.getDatos(fechaActual);
-                return bodegasParaActualizar;
-       
+                esParaActualizar = bodega.estaParaActualizarNovedadesVinos(this.fechaActual);
+                if (esParaActualizar)
+                {
+                    bodega.getNombre();
+                    bodegasParaActualizar.Add(bodega);
+                }
             }
+            return bodegasParaActualizar;
 
-            else 
-            {
-                // Pero no hay bodegas para mostar
-                return bodegasParaActualizar;
-            }
            
         }
 

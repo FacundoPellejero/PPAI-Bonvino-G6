@@ -94,7 +94,7 @@ namespace BomVino_PPAI.Models.DAO
                             Bodega bodega = new Bodega();
                             bodega.id = Convert.ToInt32(reader["id"]);
                             bodega.Nombre = reader["nombre"].ToString();
-                            bodega.CoordenadasUbicacion = reader["coordenadas"].ToString();
+                            bodega.Descripcion = reader["descripcion"].ToString();
                             bodega.UltimaActualizacion = ultimaActualizacion;
                             bodega.PeriodoActualizacion = periodoActualizacion;
 
@@ -102,18 +102,60 @@ namespace BomVino_PPAI.Models.DAO
                             objetosBodegaDatos.Add(bodega);
                         }
                     }
+                    conn.Close();
                 }
             }
             catch (Exception ex)
             {
-                // Manejar la excepción según tu lógica de aplicación
+                
                 Console.WriteLine("Error: " + ex.Message);
-                // Puedes lanzar la excepción nuevamente o manejarla de otra manera según tu caso
+     
             }
 
             return objetosBodegaDatos;
         }
 
+        public List<Bodega> getBodegas()
+        {
+            List<Bodega> objetosBodegaDatos = new List<Bodega>();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "SELECT * FROM Bodega";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        DateTime ultimaActualizacion = Convert.ToDateTime(reader["ultimaActualizacion"]);
+                        int periodoActualizacion = Convert.ToInt32(reader["periodoActualizacion"]);
+                        Bodega bodega = new Bodega();
+                        bodega.id = Convert.ToInt32(reader["id"]);
+                        bodega.Nombre = reader["nombre"].ToString();
+                        bodega.Descripcion = reader["descripcion"].ToString();
+                        bodega.UltimaActualizacion = ultimaActualizacion;
+                        bodega.PeriodoActualizacion = periodoActualizacion;
+
+                        // Agregar la bodega a la lista
+                        objetosBodegaDatos.Add(bodega);
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            return objetosBodegaDatos;
+        }
 
     }
 }
