@@ -33,7 +33,6 @@ namespace BomVino_PPAI.Controllers
         public void opcionImportarActualizacionVinos()
         {
 
-            //DateTime fechaActual = getFechaActual();
             pantallaImportador.mostarBodegasParaAcutalizar(this.buscarBodegasParaActualizar());
             //---para test despues borrar ---
             //pantallaImportador.mostarBodegasParaAcutalizar(this.listaBodegas);

@@ -14,14 +14,16 @@ namespace BomVino_PPAI.Views
 {
     public partial class PantallaImportadorBodega : Form
     {
+        private GestorImportadorBodega gestor;
         public PantallaImportadorBodega()
         {
             InitializeComponent();
+            BodegaDGV.SelectionChanged += BodegaDGV_SelectionChanged;
         }
 
         public void opcionImportarActualizacionVinos()
         {
-            GestorImportadorBodega gestor = new GestorImportadorBodega(this);
+            this.gestor = new GestorImportadorBodega(this);
             gestor.opcionImportarActualizacionVinos();
         }
 
@@ -35,9 +37,37 @@ namespace BomVino_PPAI.Views
 
         }
 
+        public void tomarSeleccionBodega()
+        {
+
+        }
+
+
+
+
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void BodegaDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void PictureSearch_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void BodegaDGV_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell celda in BodegaDGV.SelectedCells)
+            {
+                Console.WriteLine($"Celda seleccionada en fila {celda.RowIndex}, columna {celda.ColumnIndex}");
+
+            }
         }
     }
 }

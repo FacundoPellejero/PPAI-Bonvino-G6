@@ -104,6 +104,7 @@
             PictureSearch.SizeMode = PictureBoxSizeMode.AutoSize;
             PictureSearch.TabIndex = 3;
             PictureSearch.TabStop = false;
+            PictureSearch.Click += PictureSearch_Click;
             // 
             // guna2ControlBox1
             // 
@@ -245,8 +246,10 @@
             BodegaDGV.RowHeadersVisible = false;
             BodegaDGV.RowHeadersWidth = 51;
             BodegaDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BodegaDGV.Size = new Size(671, 175);
+            BodegaDGV.Size = new Size(685, 175);
             BodegaDGV.TabIndex = 16;
+            BodegaDGV.CellContentClick += BodegaDGV_CellContentClick;
+            BodegaDGV.SelectionChanged += BodegaDGV_SelectionChanged;
             // 
             // Column1
             // 
