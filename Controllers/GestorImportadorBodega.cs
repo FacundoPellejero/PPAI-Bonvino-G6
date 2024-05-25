@@ -17,6 +17,7 @@ namespace BomVino_PPAI.Controllers
         private List<Bodega> listaBodegas = new List<Bodega>();
         private string connectionString = environmentDAO.conexionBD;
         private DateTime fechaActual = new DateTime();
+        private List<string> nombresBodega = new List<string>();
 
         private BodegaDAO bodegaDAO;
         private PantallaImportadorBodega pantallaImportador;
@@ -44,12 +45,12 @@ namespace BomVino_PPAI.Controllers
             bool esParaActualizar;
             this.fechaActual = getFechaActual();
   
-            foreach (var bodega in listaBodegas)
+            foreach (Bodega bodega in listaBodegas)
             {
                 esParaActualizar = bodega.estaParaActualizarNovedadesVinos(this.fechaActual);
                 if (esParaActualizar)
                 {
-                    bodega.getNombre();
+                    nombresBodega.Add(bodega.getNombre());
                     bodegasParaActualizar.Add(bodega);
                 }
             }
