@@ -58,14 +58,18 @@ namespace BomVino_PPAI.Controllers
 
            
         }
+        public void tomarSeleccionBodega(string nombreBodegaSeleccionada)
+        {
+            obtenerActualizacionVinosBodegas(nombreBodegaSeleccionada);
+        }
+
         private void obtenerActualizacionVinosBodegas(string nombreBodegaSeleccionada)
         {
+            //busca la bodega, envia el id a la interfaz para poder llamar a la api
             //llama a la interfaz (me dio sueño lo seguimos mañana)
         }
 
-        public void tomarSeleccionBodega(string nombreBodegaSeleccionada) {
-            obtenerActualizacionVinosBodegas(nombreBodegaSeleccionada);
-        }
+       
 
         private static DateTime getFechaActual()
         {
